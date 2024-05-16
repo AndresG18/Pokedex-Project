@@ -2,13 +2,17 @@
 # import statement for CSRF
 import os
 from flask import Flask
+from flask_migrate import Migrate
 from flask_wtf.csrf import CSRFProtect, generate_csrf
 from .routes import items, pokemon
 from .config import Configuration
+from .models import db
 
 
 app = Flask(__name__)
 app.config.from_object(Configuration)
+db.init_app(app)
+Migrate(app, db)
 app.register_blueprint(items)
 app.register_blueprint(pokemon)
 

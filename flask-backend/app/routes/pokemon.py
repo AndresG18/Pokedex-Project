@@ -1,5 +1,5 @@
 from flask import Blueprint
-
+# from ..models import db,
 
 bp = Blueprint("pokemon", __name__, url_prefix="/api/pokemon")
 

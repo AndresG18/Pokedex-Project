@@ -10,3 +10,6 @@ def random_item_images():
     
     i = random.randint(0, len(images) - 1)
     return images[i]
+
+
+    print('hello world')

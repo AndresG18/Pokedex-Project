@@ -13,8 +13,8 @@ app = Flask(__name__)
 app.config.from_object(Configuration)
 db.init_app(app)
 Migrate(app, db)
-app.register_blueprint(items)
-app.register_blueprint(pokemon)
+app.register_blueprint(items.bp)
+app.register_blueprint(pokemon.bp)
 
 # after request code for CSRF token injection
 @app.after_request

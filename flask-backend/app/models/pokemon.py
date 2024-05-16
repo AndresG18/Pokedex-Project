@@ -20,7 +20,7 @@ types = [
   "ground",
   "rock",
   "steel",
-];
+]
 
 class Pokemon(db.Model):
   __tablename__ = "pokemon"

@@ -1,4 +1,7 @@
-from flask import Blueprint
+from flask import Blueprint, jsonify, redirect, request
+from xxxx import PokemonRepository, ItemsRepository
+from .utils import random_item_image
+# from .validations import 
 
 bp = Blueprint("pokemon", __name__, url_prefix="/api/pokemon")
 
@@ -19,7 +22,7 @@ types = [
   "ground",
   "rock",
   "steel",
-];
+]
 
 @bp.route("/types")
 def getTypes():
